@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import DaBlog from './DaBlog';
-import Header from './Header';
-import Navbar from './Navbar';
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+import DaBlog from './components/Blogs/DaBlog';
 
 function App() {
   return (

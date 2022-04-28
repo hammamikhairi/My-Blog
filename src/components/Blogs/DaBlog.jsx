@@ -1,5 +1,7 @@
-import Blogs from "./Blogs";
-import useFetch from "./Hooks/useFetch";
+import useFetch from "../../Hooks/useFetch";
+import Blogs from "./Blogs-card";
+import "./blogs.sass";
+
 
 const DaBlog = () => {
 

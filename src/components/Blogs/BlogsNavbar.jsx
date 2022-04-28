@@ -1,3 +1,4 @@
+import "./blogs.sass";
 
 const BlogsNavbar = () => {
   return (

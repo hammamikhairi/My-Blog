@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./blogs.sass";
 
 const Blogs = ({blogs}) => {
 
@@ -15,7 +16,6 @@ const Blogs = ({blogs}) => {
           <p>It is about time for a commit. I wrote some code, I am satisfied with it, and I want to save this state of my project now. Let’s go back to the terminal window and make our first commit. Use the command git status.</p>
           <Link to={`/myblog/blog/${blog.id}`} ><h3>Read More...</h3></Link>
         </div>
-
       )}
     </div>
   );
