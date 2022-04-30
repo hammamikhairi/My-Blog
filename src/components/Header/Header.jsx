@@ -12,7 +12,7 @@ const Header = () => {
         transition={{type:'spring', duration:1.5}} className="header-description"
         >
           <h1>A Blog!</h1>
-          <h3>I think so...</h3>
+          <h3>Is this it ?? </h3>
           <p>Just another student trying to make sense out of his life.</p>
         </motion.div>
         <motion.div className="illustration-container"
