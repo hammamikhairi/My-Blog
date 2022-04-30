@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Nunito+Sans:wght@300&family=Poppins:wght@700&family=Quicksand:wght@400;500&display=swap')
 
 
+$grey : #424242
+$pink : #D05270
+$background : #f7f7f7
 
 @mixin custom-scroll-bar()
   &::-webkit-scrollbar
@@ -13,62 +16,24 @@
   &::-webkit-scrollbar-track
     border-radius: 10px
 
-@mixin justify-vertical
-  display: flex
-  flex-direction: column
-  justify-content: center
-
-@mixin align-vertical
-  display: flex
-  flex-direction: column
-  align-items: center
-
-
-
-$grey : #424242
-$pink : #D05270
-$background : #f7f7f7
-
 *
   margin: 0
   padding: 0
   box-sizing: border-box
-  font-family: Quicksand, 'Gill Sans', Calibri
+  font-family: Quicksand
   text-decoration: none
   color: $grey
   scroll-behavior: smooth
   @include custom-scroll-bar()
 
 
+
 body
-  width: 80vw
-  margin: auto
-  background: $background
-
-
-
-@media (max-width: 1250px)
-  body
-    width: 90vw
-
-@media (max-width: 1000px)
-  .header-container
-    .illustration-container
-      width: 50% !important
-
-
-@media (max-width: 900px)
-  .header-container
-    display: block !important
-    .header-description
-      width: 100% !important
-      margin-bottom: 2rem
-    .illustration-container
-      width: 100% !important
-  .blogs
-    display: flex !important
-    flex-direction: column
-    .blog-preview
-      .blog-img
-        height: 50vh !important
-
+  background-color: $background
+  .App
+    width: 80vw
+    margin: auto
+    @media (max-width: 1250px)
+      width: 90vw
+    @media (max-width: 700px)
+      width: 95vw

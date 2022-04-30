@@ -1,22 +1,46 @@
-.navbar
-  display: flex
-  align-items: center
-  justify-content: center
-  padding-top: 2rem
-  .logo
-    margin-right: auto
-  #logo
-    font-weight: bolder
-    font-size: 2.5rem
-  .links
-    list-style: none
+#phantom
+  height: 69px
+
+.navbar-container
+  position: fixed
+  z-index: 9
+  width: 100vw
+  .navbar
+    width: 80vw !important
+    margin: auto
     display: flex
-    gap: 2rem
-    align-items: flex-start
-    li
-      font-size: 14px
-      opacity: 0.5
-      &:hover
-        transition: 5s ease in-out
-        color:  purple
-        opacity: 0.7
+    align-items: center
+    justify-content: center
+    padding-top: 1.7rem
+    padding-bottom: 0.5rem
+    background-color:#f7f7f7
+    z-index: 10
+
+    @media (max-width: 1250px)
+      width: 87vw !important
+    @media (max-width: 1000px)
+      width: 90vw !important
+    @media (max-width: 700px)
+      width: 92vw !important
+
+
+    .logo
+      margin-right: auto
+    #logo
+      font-weight: bolder
+      font-size: 2.5rem
+    .links
+      list-style: none
+      display: flex
+      gap: 2rem
+      align-items: flex-start
+      li
+        font-size: 14px
+        opacity: 0.5
+        &:hover
+          transition: 5s ease in-out
+          color:  purple
+          opacity: 0.7
+
+.shadow
+  box-shadow: 0 0 35px 0 rgb(154 161 171 / 15%)
