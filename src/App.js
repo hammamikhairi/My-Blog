@@ -1,24 +1,25 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import About from './components/About/About';
+import DaBlog from './components/Blogs/DaBlog';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
-import DaBlog from './components/Blogs/DaBlog';
+import NavbarPhantom from './components/Navbar/NavbarPhantom';
 
 function App() {
   return (
     <Router>
+      <Navbar />
+      <NavbarPhantom />
       <div className="App">
-        <Navbar />
-        <div className="content">
-          <Switch>
-            <Route exact path='/myblog/'>
-              <Header />
-              <DaBlog />
-            </Route>
-            <Route exact path='/myblog/blog/:id'>
-              hell
-            </Route>
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/myblog">
+           <Header />
+           <DaBlog />
+          </Route>
+          <Route exact path="/myblog/about">
+            <About />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
