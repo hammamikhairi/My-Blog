@@ -1,7 +1,10 @@
 #phantom
   height: 69px
+  background: #f7f7f740
 
 .navbar-container
+  background-color: #f7f7f740
+  backdrop-filter: blur(10px)
   position: fixed
   z-index: 9
   width: 100vw
@@ -11,9 +14,8 @@
     display: flex
     align-items: center
     justify-content: center
-    padding-top: 1.7rem
+    padding-top: 1.2rem
     padding-bottom: 0.5rem
-    background-color:#f7f7f7
     z-index: 10
 
     @media (max-width: 1250px)
@@ -33,6 +35,8 @@
       list-style: none
       display: flex
       gap: 2rem
+      @media (min-width: 1250px)
+        padding-right: 2rem
       align-items: flex-start
       li
         font-size: 14px

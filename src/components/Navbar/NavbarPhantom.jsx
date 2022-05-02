@@ -9,10 +9,10 @@ const NavbarPhantom = () => {
     threshold:1
   })
 
-  setTimeout(() => {
-    let navbar = document.getElementById("navbar")
-    inView? navbar.classList.remove("shadow") : navbar.classList.add("shadow")
-  }, 10)
+  // setTimeout(() => {
+  //   let navbar = document.getElementById("navbar")
+  //   inView? navbar.classList.remove("shadow") : navbar.classList.add("shadow")
+  // }, 10)
 
 
 
