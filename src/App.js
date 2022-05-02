@@ -19,6 +19,9 @@ function App() {
           <Route exact path="/myblog/about">
             <About />
           </Route>
+          <Route path="*">
+            default
+          </Route>
         </Switch>
       </div>
     </Router>
