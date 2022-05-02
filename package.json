@@ -1,6 +1,6 @@
 {
   "homepage": "https://hammamikhairi.github.io/myblog/",
-  "name": "learni",
+  "name": "MyBlog",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
