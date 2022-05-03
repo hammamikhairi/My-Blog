@@ -4,6 +4,7 @@ import DaBlog from './components/Blogs/DaBlog';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import NavbarPhantom from './components/Navbar/NavbarPhantom';
+import Testing from './components/Testing/Testing';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route exact path="/myblog/about">
             <About />
+          </Route>
+          <Route exact path="/myblog/testing">
+            <Testing />
           </Route>
           <Route path="*">
             default
