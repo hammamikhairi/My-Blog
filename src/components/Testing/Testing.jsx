@@ -1,6 +1,6 @@
 const Testing = () => {
 
-  console.log("hell")
+  console.log("hello")
   
   return ( NaN );
 }
