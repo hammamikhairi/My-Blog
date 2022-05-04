@@ -1,8 +1,9 @@
-const Testing = () => {
+import Markdown from 'markdown-to-jsx';
 
-  console.log("hell")
-  
-  return ( NaN );
+
+
+const Testing = () => {
+  return <Markdown># Hello world!</Markdown>
 }
  
 export default Testing;

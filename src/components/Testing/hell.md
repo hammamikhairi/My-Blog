@@ -1,6 +1,1 @@
----python
-
-
-console.log("")
-
----
+[hell](www.google.com)
