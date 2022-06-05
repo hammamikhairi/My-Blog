@@ -1,10 +1,12 @@
 #phantom
   height: 85px
-  background: #f7f7f740
+  background: transparent
 
+
+:root
+  --grey : #424242
 
 .navbar-container
-  background-color: #f7f7f740
   backdrop-filter: blur(10px)
   position: fixed
   z-index: 9
@@ -31,7 +33,12 @@
       margin-right: auto
     #logo
       font-weight: bolder
+      color: var(--grey)
       font-size: 2.5rem
+      @media (max-width: 500px)
+        font-size: 2rem
+      @media (max-width: 400px)
+        font-size: 1.8rem
     .links
       list-style: none
       display: flex
