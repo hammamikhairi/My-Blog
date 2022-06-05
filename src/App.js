@@ -24,7 +24,7 @@ function App() {
             <Blog />
           </Route>
           <Route path="*">
-            default
+            <h1>this is the default route</h1>
           </Route>
         </Switch>
       </div>
