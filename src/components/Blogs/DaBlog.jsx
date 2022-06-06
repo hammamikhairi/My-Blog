@@ -1,5 +1,5 @@
 import useFetch from "../Hooks/useFetch";
-import BlogCard from "./Blogs-card";
+import BlogCard from "./BlogCard";
 import "./blogs.sass";
 
 
