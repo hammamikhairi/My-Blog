@@ -21,6 +21,8 @@
   //         border-color: $pink
 
   .blogs
+
+
     padding: 0
     margin-top: 2rem
     display: grid
@@ -32,24 +34,34 @@
     height: max-content
     .card-wrapper
       min-height: 200px
+      .blog-preview
+        margin-bottom: 2rem
+        h2
+          color: $pink
+          padding: 0.7rem 0
+        p
+          color: var(--grey)
+          width: 70%
+        h4
+          color: #73737D
+          padding-top: 0.7rem
+        .blog-img
+          background-repeat: no-repeat
+          background-size: cover
+          width: 100%
+          height: auto
+          aspect-ratio: 16/9
+
+@media (max-width: 970px)
+  .blogs
+    display: flex !important
+    flex-direction: column
+    width: 90% !important
+    margin: auto
     .blog-preview
-      margin-bottom: 2rem
-      h2
-        color: $pink
-        padding: 0.7rem 0
-      p
-        color: var(--grey)
-        width: 70%
-      h4
-        color: #73737D
-        padding-top: 0.7rem
       .blog-img
-        background-repeat: no-repeat
-        background-size: cover
-        width: 100%
-        height: auto
-        aspect-ratio: 16/9
-        @media (max-width: 500px)
-          max-height: auto !important
+        height: max-content
 
 
+  // @media (max-width: 700px)
+  //   width: 80% !important
