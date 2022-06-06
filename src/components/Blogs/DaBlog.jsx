@@ -1,7 +1,18 @@
 import useFetch from "../Hooks/useFetch";
-import Blogs from "./Blogs-card";
+import BlogCard from "./Blogs-card";
 import "./blogs.sass";
 
+
+const Blogs = ({blogs}) => {
+  return (
+    <div className="blogs">
+      {
+        blogs  &&
+        blogs.map( (blog, index) => <BlogCard key ={index} blog ={blog} index ={index} />)
+      }
+    </div>
+  )
+}
 
 const DaBlog = () => {
 
@@ -10,8 +21,8 @@ const DaBlog = () => {
     <div className="blogs-container">
       {/* <BlogsNavbar /> */}
       <div>
-        {error? <h1>Error</h1> : null}
-        {isPending ? <h1>loading</h1> : <Blogs blogs={data} /> }
+        {error? <h1>Error!</h1> : null}
+        {isPending ? <h1>loading...</h1> : <Blogs blogs={data} /> }
       </div>
     </div>
   );

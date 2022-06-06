@@ -8,7 +8,6 @@ const Navbar = () => {
   const [isDarkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    console.log(localStorage.getItem('isDarkMode') === 'true');
     setDarkMode(localStorage.getItem('isDarkMode') === "true");
     if (localStorage.getItem('isDarkMode') === "true") {
       toggleDarkMode();
