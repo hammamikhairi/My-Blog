@@ -4,10 +4,10 @@ import { useEffect } from 'react'
 
 
 const NavbarPhantom = () => {
-
-  const { ref, inView } = useInView({
-    threshold:1
-  })
+  let ref;
+  // const { ref, inView } = useInView({
+  //   threshold:1
+  // })
 
   // setTimeout(() => {
   //   let navbar = document.getElementById("navbar")

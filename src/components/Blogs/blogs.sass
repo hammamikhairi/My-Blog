@@ -2,25 +2,27 @@
 
 .blogs-container
   @include align-vertical
-  .blogs-navbar
-    width: max-content
-    padding-bottom: 1rem
-    ul
-      display: flex
-      list-style: none
-      gap: auto
-      li
-        font-size: 1.5rem
-        border-bottom: 2px solid transparent
-        padding: 3px 16px
-        cursor: pointer
-        font-weight: bold
-        &:hover
-          transition: 0.5s ease
-          color: $pink
-          border-color: $pink
+  // .blogs-navbar
+  //   width: max-content
+  //   padding-bottom: 1rem
+  //   ul
+  //     display: flex
+  //     list-style: none
+  //     gap: auto
+  //     li
+  //       font-size: 1.5rem
+  //       border-bottom: 2px solid transparent
+  //       padding: 3px 16px
+  //       cursor: pointer
+  //       font-weight: bold
+  //       &:hover
+  //         transition: 0.5s ease
+  //         color: $pink
+  //         border-color: $pink
 
   .blogs
+
+
     padding: 0
     margin-top: 2rem
     display: grid
@@ -28,22 +30,38 @@
     gap: 2rem
     column-gap: 2rem
     width: 100%
+    min-height: 300px
+    height: max-content
+    .card-wrapper
+      min-height: 200px
+      .blog-preview
+        margin-bottom: 2rem
+        h2
+          color: $pink
+          padding: 0.7rem 0
+        p
+          color: var(--grey)
+          width: 70%
+        h4
+          color: #73737D
+          padding-top: 0.7rem
+        .blog-img
+          background-repeat: no-repeat
+          background-size: cover
+          width: 100%
+          height: auto
+          aspect-ratio: 16/9
+
+@media (max-width: 970px)
+  .blogs
+    display: flex !important
+    flex-direction: column
+    width: 90% !important
+    margin: auto
     .blog-preview
-      margin-bottom: 2rem
-      h4
-        color: $grey
-        padding-top: 0.5rem
-      h2
-        color: $pink
-        padding: 0.7rem 0
-      p
-        color: $grey
-      h3
-        color: $grey
-        padding-top: 1rem
       .blog-img
-        background-image: url(../../images/25788.jpg)
-        background-repeat: no-repeat
-        background-size: cover
-        width: 100%
-        height: 300px
+        height: max-content
+
+
+  // @media (max-width: 700px)
+  //   width: 80% !important

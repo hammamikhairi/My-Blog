@@ -1,10 +1,12 @@
 #phantom
-  height: 74px
-  background: #f7f7f740
+  height: 85px
+  background: transparent
 
+
+:root
+  --grey : #424242
 
 .navbar-container
-  background-color: #f7f7f740
   backdrop-filter: blur(10px)
   position: fixed
   z-index: 9
@@ -16,7 +18,7 @@
     align-items: center
     justify-content: center
     padding-top: 1.2rem
-    padding-bottom: 0.5rem
+    padding-bottom: 1rem
     z-index: 10
 
     @media (max-width: 1250px)
@@ -31,7 +33,12 @@
       margin-right: auto
     #logo
       font-weight: bolder
+      color: var(--grey)
       font-size: 2.5rem
+      @media (max-width: 500px)
+        font-size: 2rem
+      @media (max-width: 400px)
+        font-size: 1.8rem
     .links
       list-style: none
       display: flex
@@ -39,13 +46,14 @@
       @media (min-width: 1250px)
         padding-right: 2rem
       align-items: flex-start
-      li
-        font-size: 14px
-        opacity: 0.5
-        &:hover
-          transition: 5s ease in-out
-          color:  purple
-          opacity: 0.7
+      align-items: center
+      // li
+      //   font-size: 14px
+      //   opacity: 0.5
+      //   &:hover
+      //     transition: 5s ease in-out
+      //     color:  purple
+      //     opacity: 0.7
 
 .shadow
   box-shadow: 0 0 35px 0 rgb(154 161 171 / 15%)
