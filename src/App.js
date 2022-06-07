@@ -24,7 +24,7 @@ function App() {
             <Blog />
           </Route>
           <Route path="*">
-            <h1>this is the default route</h1>
+            <h1>Made with ♥ by Khairi</h1>
           </Route>
         </Switch>
       </div>
