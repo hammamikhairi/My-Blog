@@ -25,7 +25,7 @@ const BlogCard = ({blog, index}) => {
       className="blog-preview"
       key={blog.id}
       >
-        <Link to={`/myblog/blog/${blog.id}`} >
+        <Link to={`/blog/${blog.id}`} >
           <div className="blog-img" style={{backgroundImage: `url(${blog.banner})`}} />
           <h2>{blog.title}</h2>
           <p>{blog.description} </p>
