@@ -29,7 +29,6 @@ const Navbar = () => {
     <div id="navbar" className="navbar-container"  >
       <div className="navbar">
         <div className="logo">
-          {/* <HashRouter basename=""/> */}
           <Link to="/"><h1 id="logo">Khairi Hammami</h1></Link>
         </div>
         <ul className="links">

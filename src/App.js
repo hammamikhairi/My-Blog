@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import About from './components/About/About';
 import Blog from './components/Blogs/Blog/Blog';
 import DaBlog from './components/Blogs/DaBlog';
@@ -8,19 +8,19 @@ import NavbarPhantom from './components/Navbar/NavbarPhantom';
 
 function App() {
   return (
-    <Router>
+    <Router hashType='slash'>
       <Navbar />
       <NavbarPhantom />
       <div className="App">
         <Switch>
-          <Route exact path="/myblog">
+          <Route exact path="/">
            <Header />
            <DaBlog />
           </Route>
-          <Route exact path="/myblog/about">
+          <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/myblog/blog/:id">
+          <Route exact path="/blog/:id">
             <Blog />
           </Route>
           <Route path="*">
