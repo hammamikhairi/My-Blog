@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import "./navbar.sass";
 
-const Navbar = () => {
+
+const NavbarPhantom = () => <div  id="phantom"></div>
+
+const MainNavbar = () => {
 
   const [isDarkMode, setDarkMode] = useState(false);
 
@@ -44,4 +47,10 @@ const Navbar = () => {
   );
 }
 
-export default Navbar
+const Navbar = () =>
+  <>
+    <MainNavbar /> 
+    <NavbarPhantom />
+  </>
+
+  export default Navbar

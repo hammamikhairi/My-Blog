@@ -1,16 +1,14 @@
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import About from './components/About/About';
-import Blog from './components/Blogs/Blog/Blog';
-import DaBlog from './components/Blogs/DaBlog';
+import Blog from './components/Blog/Blog';
+import DaBlog from './components/Blogs/Blogs';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
-import NavbarPhantom from './components/Navbar/NavbarPhantom';
 
 function App() {
   return (
     <Router hashType='slash'>
       <Navbar />
-      <NavbarPhantom />
       <div className="App">
         <Switch>
           <Route exact path="/">
