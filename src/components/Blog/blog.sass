@@ -8,7 +8,6 @@
 
 .blog
   padding: 5rem  1rem
-  // color: var(--grey)
   del
     text-decoration: line-through
   blockquote
@@ -94,6 +93,10 @@
       width: 60%
       text-align: center
       color: var(--title-color)
+      @media (max-width: 600px)
+        font-size: 40px !important
+      @media (max-width: 450px)
+        font-size: 30px !important
     .title__underline
       h4
         color: var(--faded)
