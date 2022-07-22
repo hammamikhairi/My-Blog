@@ -1,3 +1,15 @@
+
+export const Title = ({title, date, long}) => {
+  return (
+    <div className="title__container">
+      <h1 className="title">{title}</h1>
+      <div className="title__underline">
+        <h4>{date} · {long}</h4>
+      </div>
+    </div>
+  )
+}
+
 export const Image = ({image}) => {
 
   let link = image.slice(
@@ -12,7 +24,6 @@ export const Image = ({image}) => {
       <img className="blog__image" src={link} alt='deez' />
     </div>
   )
-
 
 
   return (

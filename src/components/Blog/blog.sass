@@ -2,10 +2,12 @@
 
 :root
   --grey : #424242
+  --title-color : #000
+  --faded : #73737D
 
 
 .blog
-  padding: 2rem  1rem
+  padding: 5rem  1rem
   // color: var(--grey)
   del
     text-decoration: line-through
@@ -17,6 +19,7 @@
     margin: 1rem 2rem
   p
     width: 100%
+
 
   .image__container
     display: flex
@@ -66,3 +69,37 @@
   //   -webkit-transform: translateX(-50%) translateY(-50%)
   //   -moz-transform: translateX(-50%) translateY(-50%)
   //   transform: translateX(-50%) translateY(-50%)
+
+.blog__header
+  padding-top: 2rem
+  .banner__container
+    display: flex
+    .banner__img
+      margin: 0 auto
+      width: 95%
+      aspect-ratio: 16/9
+  // position: absolute
+  .title__container
+    margin: 100px auto
+    display: flex
+    align-items: center
+    flex-direction: column
+    .title
+      font-size: 48px
+      margin-bottom: 25px
+      font-weight: bold
+      line-height: 1.32
+      display: block
+      font-size: 2em
+      width: 60%
+      text-align: center
+      color: var(--title-color)
+    .title__underline
+      h4
+        color: var(--faded)
+
+.loader__container
+  height: calc(100vh - 300px)
+  display: flex
+  justify-content: center
+  align-items: center

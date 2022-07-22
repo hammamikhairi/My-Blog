@@ -26,6 +26,7 @@ const MainNavbar = () => {
     bod.classList.toggle("dark-body")
     let docStyle = document.documentElement.style
     docStyle.getPropertyValue('--grey') === "#fff" ? docStyle.setProperty('--grey', '#424242') : docStyle.setProperty('--grey', '#fff')
+    docStyle.getPropertyValue('--title-color') === "#fff" ? docStyle.setProperty('--title-color', '#000') : docStyle.setProperty('--title-color', '#fff')
   }
 
   return (

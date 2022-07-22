@@ -3,13 +3,12 @@ import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
 import './blog.sass';
-import { Image, Quote } from './Lego';
+import { Image, Quote, Title } from './Lego';
 
 
 
-const Article = ({title, article}) =>
+const Article = ({ article}) =>
   <>
-    <h1>{title}</h1>
     {
       article.split("$$").filter(bit => bit !== "\n" && bit !== "\n\n").map( (bit, index) => {
         if (bit.includes("br")) return <br key={index} />
@@ -35,12 +34,22 @@ const Blog = () => {
   }, [id])
 
 
-  if(!blog) return <div>Loading...</div>
+  if(!blog)
+    return (
+      <h1>loading...</h1>
+    )
+
   return (
     <>
+      <header className="blog__header">
+        <Title title={blog.title} date={blog.date} long={blog.long} />
+        <div className="banner__container">
+          <img className="banner__img" src={blog.banner} alt='deez' />
+        </div>
+      </header>
       <div className="blog">
         <div className="blog__content">
-          <Article title={blog.title} article = {blog.article} /> 
+          <Article title={blog.title} banner={blog.banner} article = {blog.article} />
         </div>
       </div>
     </>
