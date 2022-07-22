@@ -1,5 +1,9 @@
 @use "../mixins.sass" as *
 
+
+:root
+  --shadow : rgb(0 0 0 / 30%)
+
 .blogs-container
   @include align-vertical
   // .blogs-navbar
@@ -25,32 +29,36 @@
 
     padding: 0
     margin-top: 2rem
-    display: grid
-    grid-template-columns: 1fr 1fr
-    gap: 2rem
-    column-gap: 2rem
+    // display: grid
+    // grid-template-columns: 1fr 1fr
+    // gap: 2rem
+    // column-gap: 2rem
     width: 100%
     min-height: 300px
     height: max-content
     .card-wrapper
       min-height: 200px
       .blog-preview
-        margin-bottom: 2rem
+        margin-bottom: 3rem
         h2
           color: $pink
-          padding: 0.7rem 0
+          padding: 2rem 0 0.7rem 0
+          font-size: 1.5rem
         p
           color: var(--grey)
           width: 70%
+          font-size: 22px
         h4
           color: #73737D
           padding-top: 0.7rem
         .blog-img
+          box-shadow : 0 30px 60px -10px var(--shadow), 0 18px 36px -18px var(--shadow)
           background-repeat: no-repeat
           background-size: cover
+          background-position: center
           width: 100%
-          height: auto
           aspect-ratio: 16/9
+
 
 @media (max-width: 970px)
   .blogs
