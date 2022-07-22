@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Loading from 'react-loading';
 import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
@@ -36,7 +37,9 @@ const Blog = () => {
 
   if(!blog)
     return (
-      <h1>loading...</h1>
+      <div className="loader__container">
+        <Loading type="bubbles" color="#73737D" height={'10%'} width={'10%'} />
+      </div>
     )
 
   return (
