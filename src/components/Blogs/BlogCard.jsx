@@ -9,7 +9,7 @@ const BlogCard = ({blog, index}) => {
     triggerOnce: true,
     threshold: 0.3
   })
-  let delayRatio = window.innerWidth <= 970 ? 0 : (index % 2)
+  // let delayRatio = window.innerWidth <= 970 ? 0 : (index % 2)
 
   return (
     <div
@@ -21,7 +21,11 @@ const BlogCard = ({blog, index}) => {
       <motion.div
       initial={{y:'-10vh', opacity: 0}}
       animate={{y:0, opacity: 1}}
-      transition={{type:'spring', duration:1.5, delay: 0.5 * delayRatio }}
+      transition={{
+        type:'spring',
+        duration:1.5,
+        // delay: 0.5 * delayRatio
+      }}
       className="blog-preview"
       key={blog.id}
       >
