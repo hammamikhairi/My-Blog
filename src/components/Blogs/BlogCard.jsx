@@ -10,6 +10,7 @@ const BlogCard = ({blog, index}) => {
     threshold: 0.3
   })
   // let delayRatio = window.innerWidth <= 970 ? 0 : (index % 2)
+  let watcher = window.innerWidth <= 600;
 
   return (
     <div
@@ -26,11 +27,22 @@ const BlogCard = ({blog, index}) => {
         duration:1.5,
         // delay: 0.5 * delayRatio
       }}
+
+      whileHover={{
+        scale: 1 * watcher ? 1 : 1.05,
+        transition: { duration: 1 },
+      }}
+      whileTap={{
+        scale: 1 * watcher ? 1 : 1,
+      }}
+
       className="blog-preview"
       key={blog.id}
       >
         <Link to={`/blog/${blog.id}`} >
-          <div className="blog-img" style={{backgroundImage: `url(${blog.banner})`}} />
+          { watcher &&
+            <div className="blog-img" style={{backgroundImage: `url(${blog.banner})`}} />
+          }
           <h2>{blog.title}</h2>
           <p>{blog.description} </p>
           <h4>{blog.date} · {blog.long}</h4>
