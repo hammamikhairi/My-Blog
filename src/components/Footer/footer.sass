@@ -1,0 +1,27 @@
+.footer__container
+  margin-top: 4rem
+  hr
+    height: 1px
+    border-radius: 5px
+    color: var(--faded)
+    background-color: var(--faded)
+
+
+  .footer
+    padding: 4rem 2rem
+    display: flex
+    justify-content: space-between
+    .links
+      display: flex
+      align-items: center
+      gap: 2rem
+      & > *
+        &:hover
+          cursor: pointer
+    @media (max-width: 600px)
+      display: block
+      .with__love
+        text-align: center
+      .links
+        justify-content: center
+        margin-top: 2.5rem
