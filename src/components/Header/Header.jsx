@@ -23,12 +23,12 @@ const Header = () => {
         >
           <h1>Welcome !</h1>
           {/* <h3>Is this it ?? </h3> */}
-          <h3>For students and developer looking to join me in my journey in the world of modern technology.</h3>
+          <h3>For students and developers looking to join me in my journey in the world of modern technology.</h3>
           {/* <p>Just another student trying to make sense out of his life.</p> */}
         </motion.div>
         <motion.div className="illustration-container"
         initial={{
-          x: watcher ? 0:  '-10vw',
+          x: watcher ? 0:  '10vw',
           y: watcher ?'-10vh' :  0,
           opacity: 0
         }}
