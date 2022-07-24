@@ -27,6 +27,7 @@ const Article = ({ article}) =>
   </>
 
 const Blog = () => {
+  window.scrollTo(0, 0);
   const {id} = useParams();
   const [blog, setBlog] = useState(null);
 
@@ -43,7 +44,8 @@ const Blog = () => {
     )
 
   return (
-    <>
+
+    <div className='container'>
       <header className="blog__header">
         <Title title={blog.title} date={blog.date} long={blog.long} />
         { blog.banner &&
@@ -57,7 +59,7 @@ const Blog = () => {
           <Article title={blog.title} banner={blog.banner} article = {blog.article} />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

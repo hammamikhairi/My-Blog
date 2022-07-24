@@ -4,7 +4,7 @@ import "./header.sass";
 
 const Header = () => {
   let watcher = window.innerWidth <= 970;
-  console.log(watcher);
+  window.scrollTo(0, 0);
   return (
       <div className="header-container"
       >

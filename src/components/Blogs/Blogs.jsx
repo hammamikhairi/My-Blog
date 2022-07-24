@@ -24,7 +24,7 @@ const BlogsNavbar = () => {
 
 const Blogs = ({blogs}) => {
   return (
-    <div className="blogs">
+    <div className="blogs container">
       {
         blogs  &&
         blogs.map( (blog, index) => <BlogCard key ={index} blog ={blog} index ={index} />)
