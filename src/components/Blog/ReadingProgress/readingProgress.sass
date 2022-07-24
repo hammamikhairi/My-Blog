@@ -1,0 +1,24 @@
+.progressBar__container
+  position: fixed
+  left: 70px
+  top: 0px
+  z-index: 99
+  width: 2px
+  border-radius: 5px
+  height: 100vh
+  @media (max-width: 1250px)
+    left: 35px
+  @media (max-width: 1100px)
+    opacity: 0
+  .progressBar__background
+    border-radius: 5px
+    height: 65vh
+    margin: 55vh auto 0
+    transform: translateY(-50%)
+    background-color: #d4d0d0
+    .progressBar
+      background-color: #73737D
+      border-radius: 2px
+      // opacity: 0
+      transition: opacity 1s ease-in-out
+      transition: height 0.05s ease-in-out

@@ -5,8 +5,7 @@ import { useParams } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
 import './blog.sass';
 import { Image, Quote, Title } from './Lego';
-
-
+import ReadingProgress from './ReadingProgress/ReadingProgress';
 
 const Article = ({ article}) =>
   <>
@@ -30,6 +29,7 @@ const Blog = () => {
   window.scrollTo(0, 0);
   const {id} = useParams();
   const [blog, setBlog] = useState(null);
+  let watcher = window.innerWidth >= 1100;
 
   useEffect(() => {
     fetch("https://myblog.hammamikhairi.repl.co/blog/" + id).then(res => res.json()).then(data => {setBlog(data);console.log(data)})
@@ -46,6 +46,7 @@ const Blog = () => {
   return (
 
     <div className='container'>
+      { watcher && <ReadingProgress />}
       <header className="blog__header">
         <Title title={blog.title} date={blog.date} long={blog.long} />
         { blog.banner &&
