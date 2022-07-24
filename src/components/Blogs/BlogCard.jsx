@@ -40,7 +40,7 @@ const BlogCard = ({blog, index}) => {
       key={blog.id}
       >
         <Link to={`/blog/${blog.id}`} >
-          { watcher &&
+          { watcher && blog.banner &&
             <div className="blog-img" style={{backgroundImage: `url(${blog.banner})`}} />
           }
           <h2>{blog.title}</h2>

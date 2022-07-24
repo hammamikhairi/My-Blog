@@ -46,9 +46,11 @@ const Blog = () => {
     <>
       <header className="blog__header">
         <Title title={blog.title} date={blog.date} long={blog.long} />
-        <div className="banner__container">
-          <img className="banner__img" src={blog.banner} alt='deez' />
-        </div>
+        { blog.banner &&
+          <div className="banner__container">
+            <img className="banner__img" src={blog.banner} alt='deez' />
+          </div>
+        }
       </header>
       <div className="blog">
         <div className="blog__content">
