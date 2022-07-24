@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import headerIllustration from "../../images/1-01.png";
+import headerIllustration from "../../images/1-04.svg";
 import "./header.sass";
 
 const Header = () => {
@@ -21,9 +21,10 @@ const Header = () => {
         }}
         transition={{type:'spring', duration:1.5}} className="header-description"
         >
-          <h1>A Blog!</h1>
-          <h3>Is this it ?? </h3>
-          <p>Just another student trying to make sense out of his life.</p>
+          <h1>Welcome !</h1>
+          {/* <h3>Is this it ?? </h3> */}
+          <h3>For students and developer looking to join me in my journey in the world of modern technology.</h3>
+          {/* <p>Just another student trying to make sense out of his life.</p> */}
         </motion.div>
         <motion.div className="illustration-container"
         initial={{
