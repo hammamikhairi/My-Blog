@@ -5,6 +5,7 @@ $pink : #D05270
 $background : #f7f7f7
 :root
   --grey : #424242
+  --notification-background : #f7f7f7
   --ease-in-quad: cubic-bezier(0.55,0.085,0.68,0.53)
   --ease-in-quart: cubic-bezier(0.895,0.03,0.685,0.22)
   --ease-out-quad: cubic-bezier(0.25,0.46,0.45,0.94)
@@ -63,3 +64,12 @@ body
       width: 90vw
     @media (max-width: 750px)
       width: 95vw
+
+.mantine-Notification-root
+  background: var(--notification-background)
+  box-shadow : 0 30px 60px -10px var(--shadow-img), 0 18px 36px -18px var(--shadow-img)
+
+  .mantine-Text-root
+    color: var(--grey)
+  .mantine-Notification-icon
+    background-color: transparent !important

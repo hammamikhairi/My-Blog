@@ -1,8 +1,18 @@
-const uuseCopy = (e) => {
-  console.log(e.target.offsetParent.children[0].children[0].children[0].innerText.split("\n").filter(item => item !== '').join("\n"))
+import { showNotification } from '@mantine/notifications';
+import { BiLink } from 'react-icons/bi';
 
-  navigator.clipboard.writeText(e.target.offsetParent.children[0].children[0].children[0].innerText.split("\n").filter(item => item !== '').join("\n"))
 
+
+const uuseCopy = ({message, mode}) => {
+
+  navigator.clipboard.writeText(message)
+  showNotification({
+    autoClose: 5000,
+    message: mode + ' Copied!!',
+    icon: <BiLink />,
+    className: 'my-notification-class',
+  });
 }
 
 export default uuseCopy;
+

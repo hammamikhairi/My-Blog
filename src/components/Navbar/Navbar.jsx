@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { BiLink } from 'react-icons/bi';
 import { Link } from "react-router-dom";
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import uuseCopy from "../Hooks/Copy";
 import "./navbar.sass";
 
 
@@ -27,15 +29,17 @@ const MainNavbar = () => {
     let docStyle = document.documentElement.style
     docStyle.getPropertyValue('--grey') === "#fff" ? docStyle.setProperty('--grey', '#424242') : docStyle.setProperty('--grey', '#fff')
     docStyle.getPropertyValue('--title-color') === "#fff" ? docStyle.setProperty('--title-color', '#000') : docStyle.setProperty('--title-color', '#fff')
+    docStyle.getPropertyValue('--notification-background') === "rgb(17, 18, 22)" ? docStyle.setProperty('--notification-background', '#f7f7f7') : docStyle.setProperty('--notification-background', 'rgb(17, 18, 22)')
   }
 
   return (
     <div id="navbar" className="navbar-container"  >
       <div className="navbar">
         <div className="logo">
-          <Link to="/"><h1 id="logo">Khairi Hammami</h1></Link>
+          <Link to="/"><h1 id="logo" onClick={ () => { window.scrollTo(0, 0) }}>Khairi Hammami</h1></Link>
         </div>
         <ul className="links">
+          <BiLink className="bilink" onClick={ () => { uuseCopy({ message:"Copied!", mode:"Link" }) }}/>
           <DarkModeSwitch
             style={{ marginBottom: '0px' }}
             checked={isDarkMode}
