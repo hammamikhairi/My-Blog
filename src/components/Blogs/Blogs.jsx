@@ -1,3 +1,5 @@
+import { useState } from "react";
+import Loading from "react-loading";
 import useFetch from "../Hooks/useFetch";
 import BlogCard from "./BlogCard";
 import "./blogs.sass";
@@ -33,13 +35,24 @@ const Blogs = ({blogs}) => {
 
 const DaBlog = () => {
 
+  const [temp, setTemp] = useState(false);
   const { data, isPending, error } = useFetch("https://myblog.hammamikhairi.repl.co/blogs")
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 600) {
+      setTemp(true);
+    } else {
+      setTemp(false);
+    }
+  })
+
   return (
     <div className="blogs-container">
       {/* <BlogsNavbar /> */}
       <div>
         {error? <h1>Error!</h1> : null}
-        {isPending ? <h1>loading...</h1> : <Blogs blogs={data} /> }
+        {isPending ? <><Loading type="bubbles" color="#73737D" height={'50px'} width={'50px'} /><span style={{ opacity : 0}}>invisible</span></> : <Blogs blogs={data} /> }
+
       </div>
     </div>
   );
