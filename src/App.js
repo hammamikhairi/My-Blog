@@ -1,6 +1,5 @@
 import { NotificationsProvider } from '@mantine/notifications';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import About from './components/About/About';
 import Blog from './components/Blog/Blog';
 import DaBlog from './components/Blogs/Blogs';
 import Footer from './components/Footer/Footer';
@@ -15,16 +14,16 @@ function App() {
         <div className="App">
           <Switch>
             <Route exact path="/">
-            <Header />
-            <DaBlog />
+              <Header />
+              <DaBlog />
               <Footer mode="Coded" />
             </Route>
-            <Route exact path="/about">
+            {/* <Route exact path="/about">
               <About />
-            </Route>
+            </Route> */}
             <Route exact path="/blog/:id">
-                <Blog />
-                <Footer mode="Written" />
+              <Blog />
+              <Footer mode="Written" />
             </Route>
             <Route path="*">
               <h1>Made with ♥ by Khairi</h1>
