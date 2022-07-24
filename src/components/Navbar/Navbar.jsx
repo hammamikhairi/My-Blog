@@ -39,7 +39,7 @@ const MainNavbar = () => {
           <Link to="/"><h1 id="logo" onClick={ () => { window.scrollTo(0, 0) }}>Khairi Hammami</h1></Link>
         </div>
         <ul className="links">
-          <BiLink className="bilink" onClick={ () => { uuseCopy({ message:"https://hammamikhairi.github.io/myblog/", mode:"Link" }) }}/>
+          <BiLink className="bilink" onClick={ () => { uuseCopy({ message:"https://khairihammami.tech/", mode:"Link" }) }}/>
           <DarkModeSwitch
             style={{ marginBottom: '0px' }}
             checked={isDarkMode}
