@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { FaLinkedinIn } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import uuseCopy from "../Hooks/Copy";
 import useWaitForElm from '../Hooks/useWaitForElm';
 import './footer.sass';
 
@@ -21,6 +23,9 @@ const Footer = ({ mode }) => {
               <p>{ mode } with ❤️ by Khairi</p>
             </div>
             <div className="links">
+              <MdEmail onClick={ () => {
+                uuseCopy({message:'khairihammami@outlook.com', mode:'Email'});
+              }} />
               <FaLinkedinIn onClick={ () => {
                 window.open("https://www.linkedin.com/in/khairihammami/")
               }} />
