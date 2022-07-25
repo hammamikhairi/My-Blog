@@ -5,7 +5,6 @@ import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import uuseCopy from "../Hooks/Copy";
 import "./navbar.sass";
 
-
 const NavbarPhantom = () => <div  id="phantom"></div>
 
 const MainNavbar = () => {
@@ -39,7 +38,16 @@ const MainNavbar = () => {
           <Link to="/"><h1 id="logo" onClick={ () => { window.scrollTo(0, 0) }}>Khairi Hammami</h1></Link>
         </div>
         <ul className="links">
-          <BiLink className="bilink" onClick={ () => { uuseCopy({ message:"https://khairihammami.tech/", mode:"Link" }) }}/>
+          <BiLink className="bilink" onClick={ () => {
+            const id = window.location.href || document.URL
+            let message = "https://khairihammami.tech/"
+
+            if (id.includes("/blog/")) {
+              message += "#" +  id.split("#").at(-1)
+            }
+
+            uuseCopy({ message: message, mode:"Link" })
+          }}/>
           <DarkModeSwitch
             style={{ marginBottom: '0px' }}
             checked={isDarkMode}
