@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
 import './blog.sass';
+import CommentSection from './CommentSection/CommentSection';
 import { Image, Quote, Title } from './Lego';
 import LikeButton from './LikeButton/LikeButton';
 import ReadingProgress from './ReadingProgress/ReadingProgress';
@@ -61,7 +62,8 @@ const Blog = () => {
           <Article title={blog.title} banner={blog.banner} article = {blog.article} />
         </div>
       </div>
-      <LikeButton />
+      {/* <LikeButton /> */}
+      <CommentSection /> 
     </div>
   )
 }
