@@ -66,4 +66,4 @@ const Navbar = () =>
     <NavbarPhantom />
   </>
 
-  export default Navbar
+export default Navbar
