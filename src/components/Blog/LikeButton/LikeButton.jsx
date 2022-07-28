@@ -27,7 +27,7 @@ const LikeButton = () => {
     <div className="button-container">
       <button
         onClick={() => {
-          fetch("https://myblog.hammamikhairi.repl.co/like/" + url.split("/blog/").at(-1)).then(res => res.json()).then(data => {setSpam(data.spam)});
+          fetch("https://pleasedont.hammamikhairi.repl.co/like/" + url.split("/blog/").at(-1)).then(res => res.json()).then(data => {setSpam(data.spam)});
           if (!liked && spam) {
             showNotification({
               id: 'hello-there',
@@ -42,9 +42,9 @@ const LikeButton = () => {
           }
 
           if (liked) {
-            fetch("https://myblog.hammamikhairi.repl.co/likedecent/unlike/" + url.split("/blog/").at(-1));
+            fetch("https://pleasedont.hammamikhairi.repl.co/likedecent/unlike/" + url.split("/blog/").at(-1));
           } else {
-            fetch("https://myblog.hammamikhairi.repl.co/likedecent/like/" + url.split("/blog/").at(-1));
+            fetch("https://pleasedont.hammamikhairi.repl.co/likedecent/like/" + url.split("/blog/").at(-1));
           }
 
           setLiked(!liked);

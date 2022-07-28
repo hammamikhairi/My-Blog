@@ -36,7 +36,7 @@ const Blogs = ({blogs}) => {
 const DaBlog = () => {
 
   const [temp, setTemp] = useState(false);
-  const { data, isPending, error } = useFetch("https://myblog.hammamikhairi.repl.co/blogs")
+  const { data, isPending, error } = useFetch("https://pleasedont.hammamikhairi.repl.co/blogs")
 
   window.addEventListener('resize', () => {
     if (window.innerWidth <= 600) {

@@ -1,5 +1,4 @@
 import Giscus from '@giscus/react';
-import './commentSection.sass';
 
 
 const CommentSection = () =>
