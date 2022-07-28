@@ -24,7 +24,7 @@ const Footer = ({ mode }) => {
             </div>
             <div className="links">
               <MdEmail onClick={ () => {
-                uuseCopy({message:'khairihammami@outlook.com', mode:'Email'});
+                uuseCopy({ icon: <MdEmail /> ,message:'khairihammami@outlook.com', mode:'Email'});
               }} />
               <FaLinkedinIn onClick={ () => {
                 window.open("https://www.linkedin.com/in/khairihammami/")

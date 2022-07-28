@@ -46,7 +46,7 @@ const MainNavbar = () => {
               message += "#" +  id.split("#").at(-1)
             }
 
-            uuseCopy({ message: message, mode:"Link" })
+            uuseCopy({ icon: <BiLink />, message: message, mode:"Link" })
           }}/>
           <DarkModeSwitch
             style={{ marginBottom: '0px' }}
