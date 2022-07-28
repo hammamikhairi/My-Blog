@@ -1,3 +1,4 @@
+import Gist from "embed-gist";
 
 export const Title = ({title, date, long}) => {
   return (
@@ -43,3 +44,22 @@ export const Quote = ({quote}) => {
     </div>
   )
 }
+
+export const Code = ({gistId, file}) => {
+  const strip = string => string.replace(/^\s+|\s+$/g, '')
+
+  return (
+    <Gist
+      file = {strip(file)}
+      gistId = {gistId}
+      styleSheetUrl= 'https://pleasedont.hammamikhairi.repl.co/css/gist.css'
+    />
+  )
+}
+
+
+// .gist{font-size:13px;line-height:18px;width:53em}
+// .gist pre{font-family:Menlo,Monaco,'Bitstream Vera Sans Mono','Courier New',monospace !important}
+// .gist-meta{font-family:Arial,sans-serif;font-size:13px !important}
+// .gist-meta a{color:#3b5998 !important;font-weight:bold;text-decoration:none}
+// .gist-meta a:hover{text-decoration:underline}

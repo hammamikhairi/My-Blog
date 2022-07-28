@@ -5,8 +5,7 @@ import { useParams } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
 import './blog.sass';
 import CommentSection from './CommentSection/CommentSection';
-import { Image, Quote, Title } from './Lego';
-import LikeButton from './LikeButton/LikeButton';
+import { Code, Image, Quote, Title } from './Lego';
 import ReadingProgress from './ReadingProgress/ReadingProgress';
 
 const Article = ({ article}) =>
@@ -16,6 +15,7 @@ const Article = ({ article}) =>
         if (bit.includes("br")) return <br key={index} />
         if (bit.includes("image")) return <Image key={index} image={bit} />
         if (bit.includes(">")) return <Quote key={index} quote= {bit} />
+        if (bit.includes("gist")) return <Code key ={index} gistId={bit.split('/')[1]} file={bit.split('/')[2]} />
         return (
           <ReactMarkdown
             key={index}
@@ -34,7 +34,7 @@ const Blog = () => {
   let watcher = window.innerWidth >= 1100;
 
   useEffect(() => {
-    fetch("https://myblog.hammamikhairi.repl.co/blog/" + id).then(res => res.json()).then(data => {setBlog(data)})
+    fetch("https://pleasedont.hammamikhairi.repl.co/blog/" + id).then(res => res.json()).then(data => {setBlog(data)})
   }, [id])
 
 

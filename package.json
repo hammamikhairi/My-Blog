@@ -12,6 +12,7 @@
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
     "classnames": "^2.3.1",
+    "embed-gist": "^1.0.1",
     "framer-motion": "^6.2.8",
     "markdown-it": "^13.0.1",
     "markdown-to-jsx": "^7.1.7",
