@@ -7,6 +7,43 @@
 
 .container
   position: relative
+  .blog__header
+    position: relative
+    padding-top: 1rem
+    .banner__container
+      display: flex
+      .banner__img
+        margin: 0 auto
+        width: 95%
+        aspect-ratio: 16/9
+        border-radius: 3px
+    // position: absolute
+    .title__container
+      margin: 100px auto
+      display: flex
+      align-items: center
+      flex-direction: column
+      .title
+        margin-bottom: 25px
+        font-weight: bold
+        line-height: 1.32
+        display: block
+        font-size: 2em
+        width: 60%
+        text-align: center
+        color: var(--title-color)
+        @media (max-width: 600px)
+          font-size: 40px !important
+          width: 80% !important
+        @media (max-width: 450px)
+          font-size: 35px !important
+          width: 90% !important
+      .title__underline
+        h4
+          color: var(--faded)
+          font-size: 1rem
+
+
 .blog
   padding: 5rem  1rem
   del
@@ -47,6 +84,7 @@
     .quote
       font-style: italic
       font-family: 'Walter Turncoat', cursive
+      width: 100%
 
   ul
     padding-left: 2.5rem  
@@ -64,47 +102,10 @@
     // color: #b98044
     border-radius: 3px
 
-  //   left: 50%
-  //   top: 50%
-  //   -webkit-transform: translateX(-50%) translateY(-50%)
-  //   -moz-transform: translateX(-50%) translateY(-50%)
-  //   transform: translateX(-50%) translateY(-50%)
+  .link
+    &:hover
+      text-decoration: underline
 
-.blog__header
-  padding-top: 1rem
-  .banner__container
-    display: flex
-    .banner__img
-      margin: 0 auto
-      width: 95%
-      aspect-ratio: 16/9
-      border-radius: 3px
-  // position: absolute
-  .title__container
-    margin: 100px auto
-    display: flex
-    align-items: center
-    flex-direction: column
-    .title
-      font-size: 48px
-      margin-bottom: 25px
-      font-weight: bold
-      line-height: 1.32
-      display: block
-      font-size: 2em
-      width: 60%
-      text-align: center
-      color: var(--title-color)
-      @media (max-width: 600px)
-        font-size: 40px !important
-        width: 80% !important
-      @media (max-width: 450px)
-        font-size: 35px !important
-        width: 80% !important
-    .title__underline
-      h4
-        color: var(--faded)
-        font-size: 1rem
 
 .loader__container
   height: calc(100vh - 300px)

@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
 import './blog.sass';
 import CommentSection from './CommentSection/CommentSection';
+import GoBack from './GoBack/GoBack';
 import { Code, Image, Quote, Title } from './Lego';
 import ReadingProgress from './ReadingProgress/ReadingProgress';
 
@@ -12,10 +13,11 @@ const Article = ({ article}) =>
   <>
     {
       article.split("$$").filter(bit => bit !== "\n" && bit !== "\n\n").map( (bit, index) => {
-        if (bit.includes("br")) return <br key={index} />
-        if (bit.includes("image")) return <Image key={index} image={bit} />
-        if (bit.includes(">")) return <Quote key={index} quote= {bit} />
-        if (bit.includes("gist")) return <Code key ={index} gistId={bit.split('/')[1]} file={bit.split('/')[2]} />
+        if (bit.includes("!link")) return  <ReactMarkdown  key={index} children={bit.replace("!link", "")} className='link'  />
+        if (bit.includes("!br")) return <br key={index} />
+        if (bit.includes("!image")) return <Image key={index} image={bit} />
+        if (bit.includes("!>")) return <Quote key={index} quote= {bit} />
+        if (bit.includes("!gist")) return <Code key ={index} gistId={bit.split('/')[1]} file={bit.split('/')[2]} />
         return (
           <ReactMarkdown
             key={index}
@@ -38,32 +40,33 @@ const Blog = () => {
   }, [id])
 
 
-  if(!blog)
+  if(!blog) {
     return (
       <div className="loader__container">
         <Loading type="bubbles" color="#73737D" height={'10%'} width={'10%'} />
       </div>
     )
+  }
 
+  if (blog) document.title = blog.title;
   return (
 
     <div className='container'>
-      { watcher && <ReadingProgress />}
+      { watcher  && <ReadingProgress />}
       <header className="blog__header">
-        <Title title={blog.title} date={blog.date} long={blog.long} />
-        { blog.banner &&
-          <div className="banner__container">
-            <img className="banner__img" src={blog.banner} alt='deez' />
-          </div>
-        }
+        <GoBack />
+        <Title title={blog.title} date={blog.date} long={blog.long} ready={blog.ready} />
       </header>
-      <div className="blog">
-        <div className="blog__content">
-          <Article title={blog.title} banner={blog.banner} article = {blog.article} />
-        </div>
-      </div>
-      {/* <LikeButton /> */}
-      <CommentSection /> 
+      { blog.ready &&
+        <>
+          <div className="blog">
+            <div className="blog__content">
+              <Article title={blog.title} banner={blog.banner} article = {blog.article} />
+            </div>
+          </div>
+          <CommentSection />
+        </>
+      }
     </div>
   )
 }
