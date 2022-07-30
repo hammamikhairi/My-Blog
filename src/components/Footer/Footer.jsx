@@ -17,6 +17,11 @@ const Footer = ({ mode }) => {
       {
         shouldLoad &&
         <>
+          { window.innerWidth < 768 &&
+            <div className='swipe'>
+              <p>swipe right to go back</p>
+            </div>
+          }
           <hr />
           <div className='footer'>
             <div className="with__love">
