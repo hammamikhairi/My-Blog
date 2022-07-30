@@ -3,6 +3,7 @@ import Loading from 'react-loading';
 import ReactMarkdown from 'react-markdown';
 import { useParams } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
+import Footer from '../Footer/Footer';
 import './blog.sass';
 import CommentSection from './CommentSection/CommentSection';
 import GoBack from './GoBack/GoBack';
@@ -50,24 +51,33 @@ const Blog = () => {
 
   if (blog) document.title = blog.title;
   return (
-
-    <div className='container'>
-      { watcher  && <ReadingProgress />}
-      <header className="blog__header">
-        <GoBack />
-        <Title title={blog.title} date={blog.date} long={blog.long} ready={blog.ready} />
-      </header>
-      { blog.ready &&
-        <>
-          <div className="blog">
-            <div className="blog__content">
-              <Article title={blog.title} banner={blog.banner} article = {blog.article} />
+    <>
+      <div className='container'>
+        { watcher  && <ReadingProgress />}
+        <header className="blog__header">
+          <GoBack />
+          <Title title={blog.title} date={blog.date} long={blog.long} ready={blog.ready} />
+        </header>
+        { blog.ready &&
+          <>
+            <div className="blog">
+              <div className="blog__content">
+                <Article title={blog.title} banner={blog.banner} article = {blog.article} />
+              </div>
             </div>
-          </div>
-          <CommentSection />
-        </>
+            <CommentSection />
+          </>
+        }
+      </div>
+      {
+      !blog.ready ?
+      <div className='blog__footer'>
+        <Footer mode="Will be written" />
+      </div>
+      :
+      <Footer mode="Written" />
       }
-    </div>
+    </>
   )
 }
 

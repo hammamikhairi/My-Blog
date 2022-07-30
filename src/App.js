@@ -23,7 +23,6 @@ function App() {
             </Route> */}
             <Route exact path="/blog/:id">
               <Blog />
-              <Footer mode="Written" />
             </Route>
             <Route path="*">
               <h1>Made with ♥ by Khairi</h1>

@@ -17,7 +17,7 @@ const Footer = ({ mode }) => {
       {
         shouldLoad &&
         <>
-          { window.innerWidth < 768 &&
+          { window.innerWidth < 768 && window.location.href.includes('/blog/') &&
             <div className='swipe'>
               <p>swipe right to go back</p>
             </div>
