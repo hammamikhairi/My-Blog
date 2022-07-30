@@ -1,3 +1,8 @@
+
+:root
+  --dark-scroll : rgba(60 61 64)
+  --light-scroll : rgb(160 160 162)
+
 .progressBar__container
   position: fixed
   left: 70px
@@ -15,9 +20,9 @@
     height: 65vh
     margin: 55vh auto 0
     transform: translateY(-50%)
-    background-color: rgba(60 61 64)
+    background-color: var(--dark-scroll)
     .progressBar
-      background-color: rgb(160 160 162)
+      background-color: var(--light-scroll)
       border-radius: 2px
       // opacity: 0
       transition: opacity 1s ease-in-out

@@ -29,6 +29,8 @@ const MainNavbar = () => {
     docStyle.getPropertyValue('--grey') === "#fff" ? docStyle.setProperty('--grey', '#424242') : docStyle.setProperty('--grey', '#fff')
     docStyle.getPropertyValue('--title-color') === "#fff" ? docStyle.setProperty('--title-color', '#000') : docStyle.setProperty('--title-color', '#fff')
     docStyle.getPropertyValue('--notification-background') === "rgb(17, 18, 22)" ? docStyle.setProperty('--notification-background', '#f7f7f7') : docStyle.setProperty('--notification-background', 'rgb(17, 18, 22)')
+    docStyle.getPropertyValue('--dark-scroll') === "rgba(60 61 64)" ? docStyle.setProperty('--dark-scroll', 'rgb(160 160 162)') : docStyle.setProperty('--dark-scroll', 'rgba(60 61 64)')
+    docStyle.getPropertyValue('--light-scroll') === "rgb(160 160 162)" ? docStyle.setProperty('--light-scroll', 'rgba(60 61 64)') : docStyle.setProperty('--light-scroll', 'rgb(160 160 162)')
   }
 
   return (
