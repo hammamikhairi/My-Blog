@@ -1,11 +1,11 @@
-import Gist from "embed-gist";
+import Gist from "styled-react-gist";
 
-export const Title = ({title, date, long}) => {
+export const Title = ({title, date, long, ready}) => {
   return (
     <div className="title__container">
       <h1 className="title">{title}</h1>
       <div className="title__underline">
-        <h4>{date} · {long}</h4>
+        <h4>{date} { ready && '·'} { ready && long }</h4>
       </div>
     </div>
   )
@@ -56,7 +56,6 @@ export const Code = ({gistId, file}) => {
     />
   )
 }
-
 
 // .gist{font-size:13px;line-height:18px;width:53em}
 // .gist pre{font-family:Menlo,Monaco,'Bitstream Vera Sans Mono','Courier New',monospace !important}

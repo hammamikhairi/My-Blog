@@ -40,12 +40,12 @@ const BlogCard = ({blog, index}) => {
       key={blog.id}
       >
         <Link to={`/blog/${blog.id}`} onClick={ () => {window.scrollTo(0, 0)}} >
-          { watcher && blog.banner &&
+          {/* { watcher && blog.banner &&
             <div className="blog-img" style={{backgroundImage: `url(${blog.banner})`}} />
-          }
+          } */}
           <h2>{blog.title}</h2>
           <p>{blog.description} </p>
-          <h4>{blog.date} · {blog.long} · { blog.likes !== 1 ? `${blog.likes} likes`: `1 like`}</h4>
+          <h4>{blog.date} {blog.ready && '·' } {blog.ready && blog.long} </h4>
         </Link>
       </motion.div>
     }
