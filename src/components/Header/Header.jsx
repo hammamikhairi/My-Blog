@@ -5,6 +5,7 @@ import "./header.sass";
 const Header = () => {
   let watcher = window.innerWidth <= 970;
   window.scrollTo(0, 0);
+  document.title = "0xkhairi";
   return (
       <div className="header-container"
       >
