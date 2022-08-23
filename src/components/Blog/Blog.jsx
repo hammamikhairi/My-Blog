@@ -33,11 +33,12 @@ const Article = ({ article}) =>
 const Blog = () => {
   // window.scrollTo(0, 0);
   const {id} = useParams();
+  const preview = id.includes("PREVIEW-");
   const [blog, setBlog] = useState(null);
   let watcher = window.innerWidth >= 1100;
 
   useEffect(() => {
-    fetch("https://pleasedont.hammamikhairi.repl.co/blog/" + id).then(res => res.json()).then(data => {setBlog(data)})
+    fetch("https://pleasedont.hammamikhairi.repl.co/blog/" + id.replace('PREVIEW-', '')).then(res => res.json()).then(data => {setBlog(data)})
   }, [id])
 
 
@@ -50,6 +51,7 @@ const Blog = () => {
   }
 
   if (blog) document.title = blog.title;
+
   return (
     <>
       <div className='container'>
@@ -58,7 +60,8 @@ const Blog = () => {
           <GoBack />
           <Title title={blog.title} date={blog.date} long={blog.long} ready={blog.ready} />
         </header>
-        { blog.ready &&
+
+        { (blog.ready || preview) &&
           <>
             <div className="blog">
               <div className="blog__content">
@@ -70,12 +73,12 @@ const Blog = () => {
         }
       </div>
       {
-      !blog.ready ?
-      <div className='blog__footer'>
-        <Footer mode="Will be written" />
-      </div>
-      :
-      <Footer mode="Written" />
+        (blog.ready || preview) ?
+        <Footer mode="Written" />
+        :
+        <div className='blog__footer'>
+          <Footer mode="Will be written" />
+        </div>
       }
     </>
   )
