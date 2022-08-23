@@ -7,6 +7,7 @@
 
 .container
   position: relative
+  width: 100%
   .blog__header
     position: relative
     padding-top: 1rem
@@ -29,7 +30,7 @@
         line-height: 1.32
         display: block
         font-size: 2em
-        width: 60%
+        width: 80%
         text-align: center
         color: var(--title-color)
         @media (max-width: 600px)
@@ -45,7 +46,9 @@
 
 
 .blog
-  padding: 5rem  1rem
+  padding: 3rem  1rem
+  display: flex
+  justify-content: center
   del
     text-decoration: line-through
   blockquote
@@ -57,18 +60,50 @@
   p
     width: 100%
 
+  .blog__content
+    width: 80%
+    @media (max-width: 1250px)
+      width: 90%
+    h2
+      font-size: 2rem
+      padding-top: 2rem
+    h3
+      font-size: 1.5rem
+      padding-top: 0.8rem
+    a
+      text-decoration: none
+      display: inline-block
+      position: relative
+      color : #4abaf3
+      &:after
+        content: ''
+        position: absolute
+        width: 100%
+        transform: scaleX(0)
+        height: 2px
+        bottom: 0
+        left: 0
+        background-color: #4abaf3
+        transform-origin: bottom right
+        transition: transform 0.25s ease-out
+
+      &:hover:after
+        transform: scaleX(1)
+        transform-origin: bottom left
 
   .image__container
     display: flex
     justify-content: center
-    .img
-      height: 370px
+    img
+      // height: 370px
       background-position: center
       background-repeat: no-repeat
       @media ( max-width: 750px)
         height: 300px
       @media ( max-width: 500px)
         height: 250px
+    .tiny
+      width: 50% !important
     .blog__image
       width: 80%
       border-radius: 5px
@@ -102,6 +137,8 @@
     // color: #b98044
     border-radius: 3px
 
+  .gist
+    width: 100%
   .link
     &:hover
       text-decoration: underline
