@@ -20,11 +20,21 @@ export const Image = ({image}) => {
   console.log(link)
 
 
-  if ( image.includes("full") ) return (
-    <div className="image__container">
-      <img className="blog__image" src={link} alt='deez' />
-    </div>
-  )
+  if ( image.includes("full") ){
+
+    return (
+      <div className="image__container">
+        <img className="blog__image" src={link} alt='failed' />
+      </div>
+    )
+  }
+
+  if ( image.includes("tiny") )
+    return (
+      <div className="image__container">
+        <img className="blog__image tiny" src={link} alt='failed' />
+      </div>
+    )
 
 
   return (
@@ -35,7 +45,7 @@ export const Image = ({image}) => {
 }
 
 export const Quote = ({quote}) => {
-  let text = quote.replace( />/g, "")
+  let text = quote.replace( /!>/g, "")
   return (
     <div className="quote__container">
       <div className="quote">
@@ -50,6 +60,7 @@ export const Code = ({gistId, file}) => {
 
   return (
     <Gist
+      className='gist'
       file = {strip(file)}
       gistId = {gistId}
       styleSheetUrl= 'https://pleasedont.hammamikhairi.repl.co/css/gist.css'
