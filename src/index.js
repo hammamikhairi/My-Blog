@@ -17,7 +17,7 @@ if (window.innerWidth < 768) {
     touchendX = e.changedTouches[0].screenX
     if (window.location.href.includes('/blog/'))
       if (touchendX - touchstartX > (window.screen.width / 3))
-        window.history.back()
+        window.open('https://khairihammami.tech/#/', '_self' )
   })
 }
 
