@@ -3,7 +3,6 @@ import { AiOutlineUp } from 'react-icons/ai';
 import './scrollUp.sass';
 
 export const ScrollUp = () => {
-  console.log('scroll up');
   return (
     <>
     {window.innerWidth > 768 &&

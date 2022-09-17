@@ -10,7 +10,6 @@ const Cell = () => {
     root: "200px",
     triggerOnce: true
   })
-  console.log(inView)
 
   return (
     <div ref={ref} className="cell-container">
