@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Gist from "styled-react-gist";
 
 export const Title = ({title, date, long, ready}) => {
@@ -17,7 +18,6 @@ export const Image = ({image}) => {
     image.indexOf('(') + 1,
     image.lastIndexOf(')'),
   );
-  console.log(link)
 
 
   if ( image.includes("full") ){
@@ -31,11 +31,18 @@ export const Image = ({image}) => {
 
   if ( image.includes("tiny") )
     return (
-      <div className="image__container">
-        <img className="blog__image tiny" src={link} alt='failed' />
+      <div className="image__container tiny">
+        <img className="blog__image" src={link} alt='failed' />
       </div>
     )
 
+  if ( image.includes("svg") ){
+    return (
+      <div className="image__container">
+        <Svg link ={link} />
+      </div>
+    )
+  }
 
   return (
     <div className="image__container">
@@ -59,13 +66,35 @@ export const Code = ({gistId, file}) => {
   const strip = string => string.replace(/^\s+|\s+$/g, '')
 
   return (
-    <Gist
-      className='gist'
-      file = {strip(file)}
-      gistId = {gistId}
-      styleSheetUrl= 'https://pleasedont.hammamikhairi.repl.co/css/gist.css'
-    />
+    <div className="gist">
+      <Gist
+        file = {strip(file)}
+        gistId = {gistId}
+        styleSheetUrl= 'https://pleasedont.hammamikhairi.repl.co/css/gist.css'
+      />
+    </div>
   )
+}
+
+const Svg = ({link}) => {
+  const [svg, setSvg] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isErrored, setIsErrored] = useState(false);
+  useEffect(() => {
+    fetch(link)
+      .then(res => res.text())
+      .then(setSvg) 
+      .catch(setIsErrored)
+      .then(() => setIsLoaded(true))
+  }, [link]);
+
+  if (isErrored) return <div>SVG Error</div>;
+  return (
+      <div
+          className={`svgInline svgInline--${isLoaded ? 'loaded' : 'loading'} ${isErrored ? 'svgInline--errored' : ''}`}
+          dangerouslySetInnerHTML={{ __html: svg }}
+      />
+  );
 }
 
 // .gist{font-size:13px;line-height:18px;width:53em}
