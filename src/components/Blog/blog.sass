@@ -64,6 +64,8 @@
     width: 80%
     @media (max-width: 1250px)
       width: 90%
+    @media (max-width: 1000px)
+      width: 100% !important
     h2
       font-size: 2rem
       padding-top: 2rem
@@ -94,22 +96,37 @@
   .image__container
     display: flex
     justify-content: center
-    img
-      // height: 370px
-      background-position: center
-      background-repeat: no-repeat
-      @media ( max-width: 750px)
-        height: 300px
-      @media ( max-width: 500px)
-        height: 250px
+    height: max-content !important
+    // max-width: 100%
     .tiny
-      width: 50% !important
+      width: 30% !important
     .blog__image
       width: 80%
       border-radius: 5px
       margin: 1rem 0
       @media ( max-width: 970px )
         width: 95%
+    div
+      position: relative
+      // width: 100vw
+      // overflow: scroll
+      padding: 1rem 0
+      @media (max-width: 1250px)
+        overflow: auto
+      svg
+        // position: absolute
+        max-width: 100%
+        transform: scale(0.8)
+        // // // @media ( max-width: 700px )
+        // // //   transform: scale(0.5)
+        @media ( max-width: 650px )
+          transform: scale(0.7)
+        @media ( max-width: 600px )
+          transform: scale(0.6)
+        @media ( max-width: 530px )
+          transform: scale(0.65)
+        @media ( max-width: 500px )
+          transform: scale(0.64)
   .quote__container
     border-left: 4px solid #e4e5e6
     margin-top: 0.7rem
@@ -139,6 +156,7 @@
 
   .gist
     width: 100%
+    padding-top: 1rem
   .link
     &:hover
       text-decoration: underline
