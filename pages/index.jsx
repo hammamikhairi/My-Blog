@@ -11,7 +11,7 @@ export default function Page() {
     <>
 
       <Head>
-        <title>OxKhairi</title>
+        <title>0xKhairi</title>
       </Head>
       <Navbar />
       <Header />
