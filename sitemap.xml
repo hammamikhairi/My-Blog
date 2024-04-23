@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://flayes.app/</loc>
+        <lastmod>2024-03-27T00:00:00.000Z</lastmod>
+         <changefreq>weekly</changefreq>
+         <priority>1</priority>
+    </url>
+    <url>
+         <loc>https://flayes.app/FAQ</loc>
+         <lastmod>2024-03-19T00:00:00.000Z</lastmod>
+         <changefreq>weekly</changefreq>
+         <priority>0.8</priority>
+    </url>
+    <url>
+         <loc>https://flayes.app/TermsAndConditions</loc>
+         <lastmod>2024-03-19T00:00:00.000Z</lastmod>
+         <changefreq>weekly</changefreq>
+         <priority>0.8</priority>
+    </url>
+    <url>
+         <loc>https://flayes.app/AccessDashboard</loc>
+         <lastmod>2024-03-18T00:00:00.000Z</lastmod>
+         <changefreq>weekly</changefreq>
+         <priority>0.5</priority>
+    </url>
+</urlset>

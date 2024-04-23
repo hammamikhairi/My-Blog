@@ -1,63 +1,30 @@
 {
-  "homepage": "http://blog.khairihammami.tech",
-  "name": "MyBlog",
-  "version": "1.2.0",
   "private": true,
-  "dependencies": {
-    "@giscus/react": "^2.1.1",
-    "@mantine/core": "^4.2.12",
-    "@mantine/hooks": "^4.2.12",
-    "@mantine/notifications": "^4.2.12",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.3",
-    "@testing-library/user-event": "^13.5.0",
-    "classnames": "^2.3.1",
-    "framer-motion": "^6.2.8",
-    "markdown-it": "^13.0.1",
-    "markdown-to-jsx": "^7.1.7",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.4.0",
-    "react-intersection-observer": "^8.33.1",
-    "react-loading": "^2.0.3",
-    "react-markdown": "^8.0.3",
-    "react-query": "^3.34.16",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "5.0.0",
-    "react-syntax-highlighter": "^15.5.0",
-    "react-toggle-dark-mode": "^1.0.4",
-    "remark-gfm": "^3.0.1",
-    "sass": "^1.49.9",
-    "styled-react-gist": "^1.0.0",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "gh-pages": "^3.2.3"
+  "dependencies": {
+    "@giscus/react": "^3.0.0",
+    "@mantine/notifications": "^7.8.1",
+    "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
+    "axios": "^1.6.7",
+    "framer-motion": "^11.0.6",
+    "fs": "^0.0.1-security",
+    "lodash": "^4.17.21",
+    "next": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^5.1.0",
+    "react-intersection-observer": "^9.8.1",
+    "react-loading": "^2.0.3",
+    "react-markdown": "^9.0.1",
+    "react-toastify": "^10.0.4",
+    "react-toggle-dark-mode": "^1.1.1",
+    "remark-gfm": "^4.0.0",
+    "sass": "^1.75.0",
+    "styled-react-gist": "^1.0.1"
   }
 }

@@ -1,0 +1,117 @@
+@use "./mixins.sass" as *
+
+
+:root
+  --shadow : rgb(0 0 0 / 30%)
+  --shadow-img : rgb(0 0 0 / 10%)
+  --ease-in-out-quad: cubic-bezier(0.455,0.03,0.515,0.955)
+
+
+.blogs-container
+  @include align-vertical
+  // .blogs-navbar
+  //   width: max-content
+  //   padding-bottom: 1rem
+  //   ul
+  //     display: flex
+  //     list-style: none
+  //     gap: auto
+  //     li
+  //       font-size: 1.5rem
+  //       border-bottom: 2px solid transparent
+  //       padding: 3px 16px
+  //       cursor: pointer
+  //       font-weight: bold
+  //       &:hover
+  //         transition: 0.5s ease
+  //         color: $pink
+  //         border-color: $pink
+
+  .blogs
+
+
+    padding: 0
+    margin-top: 2rem
+    // display: grid
+    // grid-template-columns: 1fr 1fr
+    // gap: 2rem
+    // column-gap: 2rem
+    width: 100%
+    min-height: 300px
+    height: max-content
+    .card-wrapper
+      min-height: 200px
+      width: 80vw
+      .blog-preview
+        margin-bottom: 3rem
+        padding: 1rem
+        border-radius: 0.5rem
+        @media ( max-width: 600px )
+          box-shadow : 0 30px 60px -10px var(--shadow), 0 18px 36px -18px var(--shadow)
+        @media ( min-width: 600px )
+          &:hover
+            box-shadow : 0px 0px 60px 10px var(--shadow)
+            // background-color: #fefefe
+
+        h2
+          color: $pink
+          padding: 0.7rem 0 0.7rem 0
+          font-size: 1.5rem
+        p
+          color: var(--grey)
+          width: 70%
+          font-size: 22px
+        h4
+          color: #73737D
+          padding-top: 0.7rem
+          font-size: 1rem
+
+        .blog-img
+          box-shadow : 0 30px 60px -10px var(--shadow-img), 0 18px 36px -18px var(--shadow-img)
+          background-repeat: no-repeat
+          background-size: cover
+          background-position: center
+          width: 100%
+          aspect-ratio: 16/9
+
+        @media (max-width: 600px)
+          h2
+            font-size: 1.2rem
+          p
+            width: 90%
+            font-size: 18px
+          h4
+            font-size: 1rem
+        @media (max-width: 380px)
+          h2
+            font-size: 1.1rem
+          p
+            width: 90%
+            font-size: 15px
+          h4
+            font-size: 0.8rem
+
+        // @media (max-width: 450px)
+        //   font-size: 35px !important
+        //   width: 80% !important
+
+
+
+@media (max-width: 970px)
+  .blogs
+    display: flex !important
+    flex-direction: column
+    width: 95% !important
+    margin: auto
+    .blog-preview
+      .blog-img
+        height: max-content
+
+
+  // @media (max-width: 700px)
+  //   width: 80% !important
+
+
+.blog_comment_section
+  width: 90%
+  margin: auto

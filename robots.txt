@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /business/
+Disallow: /admin/
+Sitemap: https://flayes.app/sitemap.xml

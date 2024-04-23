@@ -1,0 +1,82 @@
+@use "./mixins" as *
+
+.header-container
+  display: flex
+  height: max-content
+  padding: 4rem 0 7rem 0
+  width: 90vw
+  margin: auto
+  .header-description
+    @include justify-vertical
+    width: 60%
+    flex: 3
+    & > *
+      margin-left: 3rem
+    h1
+      color: $pink
+      padding: 0 0 0.7rem 0 
+      font-weight: 700
+      font-size: 52px
+    h3
+      font-weight: 500
+      // margin-bottom: 1.5rem
+      font-size: 30px
+      // text-align: center
+      align-self: center
+    p
+      width: 90%
+      font-size:20px
+      font-weight:400
+  .illustration-container
+    display: flex
+    justify-content: center
+    align-items: center
+    flex: 3
+    width: 100%
+    .illustration
+      // background-image: url('../../images/1-01.png')
+      background-size: cover
+      height: max-content
+      background-repeat: no-repeat
+      height: 300px
+      width: 500px
+
+      @media (max-width:510px)
+        width: 90vw !important
+        height: auto !important
+
+@media (max-width: 1100px)
+  .header-container
+    .header-description
+      h1
+        font-size: 45px
+      h3
+        font-size: 25px
+
+@media (max-width: 970px)
+  .header-container
+    display: block !important
+    .header-description
+      width: 100% !important
+      margin-bottom: 2rem
+      text-align:  center
+      & > *
+        margin-left: 0
+        text-align: center
+      p
+        width: 70% !important
+        margin : auto
+      h3
+        width: 70%
+
+
+  .header-container
+    .illustration-container
+      width: 100%
+      display: flex
+      @media (max-width: 970px)
+        padding-top: 2rem
+      .illustration
+        justify-self: center
+        background-position: center
+        background-size: contain
