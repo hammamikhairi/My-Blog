@@ -47,7 +47,7 @@ export default function App({ Component, pageProps }) {
         <meta name="keywords" content="khairi, khairi hammami, blog, programming, coding, flayes" />
 
         {/* <link
-            href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Nunito+Sans:wght@300&family=Poppins:wght@700&family=Quicksand:wght@400;500&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap"
             rel="stylesheet"
           /> */}
       </Head>

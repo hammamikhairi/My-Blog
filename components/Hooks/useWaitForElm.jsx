@@ -1,10 +1,17 @@
 
 
 const useWaitForElm = (selector) => {
+
+
+
+
   return new Promise( resolve => {
-    if (document.querySelector(selector)) {
-      return resolve(document.querySelector(selector));
-    }
+
+    setTimeout(() => {
+      if (document.querySelector(selector)) {
+        return resolve(document.querySelector(selector));
+      }
+    }, 1000);
 
     const observer = new MutationObserver( mutations => {
       if (document.querySelector(selector)) {
